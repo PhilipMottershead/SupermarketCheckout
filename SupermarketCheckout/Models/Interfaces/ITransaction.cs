@@ -2,7 +2,7 @@ namespace SupermarketCheckout.Models.Interfaces
 {
     public interface ITransaction
     {
-        ICurrentOffers CurrentOffers { get; set; }
+        ICurrentItems CurrentItems { get; set; }
         IBasket Basket { get; set; }
         long RunningTotal { get; set; }
         long FinalTotal{ get; set; }

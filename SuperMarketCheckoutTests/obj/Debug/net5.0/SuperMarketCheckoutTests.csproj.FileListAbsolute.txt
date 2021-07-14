@@ -111,3 +111,7 @@ C:\Users\Philip\RiderProjects\SupermarketCheckout\SuperMarketCheckoutTests\bin\D
 C:\Users\Philip\RiderProjects\SupermarketCheckout\SuperMarketCheckoutTests\bin\Debug\net5.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
 C:\Users\Philip\RiderProjects\SupermarketCheckout\SuperMarketCheckoutTests\bin\Debug\net5.0\SupermarketCheckout.dll
 C:\Users\Philip\RiderProjects\SupermarketCheckout\SuperMarketCheckoutTests\bin\Debug\net5.0\SupermarketCheckout.pdb
+C:\Users\Philip\RiderProjects\SupermarketCheckout\SuperMarketCheckoutTests\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\Philip\RiderProjects\SupermarketCheckout\SuperMarketCheckoutTests\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Philip\RiderProjects\SupermarketCheckout\SuperMarketCheckoutTests\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Philip\RiderProjects\SupermarketCheckout\SuperMarketCheckoutTests\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll

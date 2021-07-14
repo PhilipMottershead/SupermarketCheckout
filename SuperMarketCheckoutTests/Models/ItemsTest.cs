@@ -14,5 +14,11 @@ namespace SuperMarketCheckoutTests.Models
           {
               _item = new Item("A",50);
           }
+
+          [Test]
+          public void TestSetSku()
+          {
+              Assert.AreEqual("A",_item.StockKeepingUnit);
+          }
     }
 }

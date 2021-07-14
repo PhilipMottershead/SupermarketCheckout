@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using System.Collections.ObjectModel;
 using NUnit.Framework;
 using SupermarketCheckout.Models;
 using SupermarketCheckout.Models.Interfaces;
@@ -42,6 +43,16 @@ namespace SuperMarketCheckoutTests.Models
             var mapBasket = new ConcurrentDictionary<IItem, long> {[ItemA] = 1};
             _basket.BasketItems = mapBasket;
             Assert.AreEqual(_basket.BasketItems, mapBasket);
+        }
+        
+        [Test]
+        public void TestGetItemInBasket2()
+        {
+            var mapBasket = new Collection<IItem>() {ItemB,ItemA,};
+            _basket.AddToBasket(ItemB);
+            _basket.AddToBasket(ItemA);
+
+            Assert.AreEqual(mapBasket,_basket.GetItemsInBasket());
         }
         
         [Test]

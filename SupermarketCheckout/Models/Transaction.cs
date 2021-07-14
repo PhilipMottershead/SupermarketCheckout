@@ -4,14 +4,14 @@ namespace SupermarketCheckout.Models
 {
     public class Transaction : ITransaction
     {
-        public ICurrentOffers CurrentOffers { get; set; }
+        public ICurrentItems CurrentItems { get; set; }
         public IBasket Basket { get; set; }
         public long RunningTotal { get; set; }
         public long FinalTotal { get; set; }
         
-        public Transaction(ICurrentOffers currentOffers){
+        public Transaction(ICurrentItems currentOffers){
             Basket = new Basket();
-            CurrentOffers = currentOffers;
+            CurrentItems = currentOffers;
             RunningTotal = 0;
             FinalTotal = 0;
         }
@@ -20,7 +20,7 @@ namespace SupermarketCheckout.Models
         {
             Basket.AddToBasket(item);
             RunningTotal += item.UnitPrice;
-            RunningTotal += CurrentOffers.CalculateOfferDiscount(item,Basket);
+            RunningTotal += CurrentItems.CurrentOffers.CalculateOfferDiscount(item,Basket);
             return Basket;
         }
 
@@ -29,7 +29,7 @@ namespace SupermarketCheckout.Models
             foreach (var item in Basket.GetItemsInBasket())
             {
                 FinalTotal += item.UnitPrice * Basket.GetAmountOfItemInBasket(item);
-                FinalTotal += CurrentOffers.CalculateFinalOfferDiscount(item,Basket);
+                FinalTotal += CurrentItems.CurrentOffers.CalculateFinalOfferDiscount(item,Basket);
             }
             return FinalTotal;
         }
